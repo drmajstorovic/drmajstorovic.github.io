@@ -1,0 +1,40 @@
+#header {
+    padding: 17px;
+    display: block;
+}
+
+#navbar {
+    background-color: inherit;
+    display: block;
+    width: max-content;
+    margin: auto;
+}
+
+#navbar ul {
+    list-style-type: none;
+    background-color: inherit;
+    display: block;
+}
+
+#navbar li {
+    display: inline;
+    font-size: 20px;
+    margin: 15px;
+}
+
+#navbar a {
+    text-decoration: none;
+    text-align: center;
+    background-color: #3F1F5C;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 75px;
+}
+
+#navbar a:hover{
+    cursor:pointer;
+    background-color: #A6A3E0;
+    color: black;
+}
