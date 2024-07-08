@@ -88,7 +88,7 @@ body {
 
 @media screen and (max-width: 800px) {
     #welcome, #about, #my-projects, #project-links {
-        width: 90%;
+        width: 85%;
         padding: 25px;
     }
 }
