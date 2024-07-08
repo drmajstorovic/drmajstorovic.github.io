@@ -40,3 +40,46 @@ body {
     margin: auto;
     border-radius: 45px;
 }
+
+#my-projects {
+    margin: auto;
+    border-radius: 75px;
+    width: 40%;
+    background-color: #A6A3E0;
+    color: black;
+    text-align: justify;
+    padding: 70px;
+    padding-top: 20px;
+}
+
+#my-projects h2, h3 {
+    text-align: center;
+}
+
+#github-link {
+    text-decoration: none;
+}
+
+#project-links {
+    margin: auto;
+    border-radius: 75px;
+    width: 40%;
+    background-color: #A6A3E0;
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding: 70px;
+}
+
+#projects-button {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    background-color: #1F255C;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    width: 250px;
+    margin: auto;
+    border-radius: 75px;
+}

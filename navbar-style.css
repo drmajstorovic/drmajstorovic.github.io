@@ -1,13 +1,10 @@
-#header {
-    padding: 17px;
-    display: block;
-}
-
 #navbar {
     background-color: inherit;
     display: block;
     width: max-content;
     margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #navbar ul {
@@ -20,6 +17,7 @@
     display: inline;
     font-size: 20px;
     margin: 15px;
+    margin-left: 0;
 }
 
 #navbar a {
