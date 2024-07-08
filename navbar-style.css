@@ -11,13 +11,13 @@
     list-style-type: none;
     background-color: inherit;
     display: block;
+    padding-left: 0%;
 }
 
 #navbar li {
     display: inline;
     font-size: 20px;
     margin: 15px;
-    margin-left: 0;
 }
 
 #navbar a {
