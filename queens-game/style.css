@@ -6,12 +6,13 @@ body {
 #game-div {
     background-color: #A6A3E0;
     width: 50%;
-    height: 900px;
+    height: auto;
     text-align: center;
     margin: auto;
     margin-top: 50px;
     border-radius: 75px;
     padding: 30px;
+    color: black;
 }
 
 .header {
@@ -20,7 +21,6 @@ body {
 
 .rules {
     text-align: left;
-    color: black;
     margin-left: 30px;
 }
 
@@ -36,7 +36,7 @@ td {
     height: 40px;
 }
 
-#start {
+.button {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -46,10 +46,18 @@ td {
     color: white;
 }
 
-#start:hover {
+.button:hover {
     background-color: #C9ABE3;
     color: black;
     cursor: pointer;
+}
+
+.game {
+    display: none;
+}
+
+.image {
+    width: 36px;
 }
 
 @media screen and (max-width: 800px) {

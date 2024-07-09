@@ -9,6 +9,122 @@
     <link rel="icon" href="images/queen-black.png">
 </head>
 <body>
+    <script>
+        var time = 0;
+        
+        function check(cell){
+            var id = cell.getAttribute("id");
+            var row = parseInt(id[2]);
+            var col = parseInt(id[3]);
+            var ok = true;
+            var black =  '<img src="images/queen-black.png" class="image">';
+            var red =  '<img src="images/queen-red.png" class="image">'
+            let timer;
+
+            for(let i = 1; i <= 8; i++){
+                for(let j = 1; j <= 8; j++){
+                    var newid = "td" + i + "" + j;
+                    var c = document.getElementById(newid);
+                    if(i == row && j == col)
+                        continue;
+                    if(i == row || j == col){
+                        if(document.getElementById(newid).innerHTML == black || document.getElementById(newid).innerHTML == red){
+                            document.getElementById(newid).innerHTML = red;
+                            ok = false;
+                        }
+                    }
+                    if((i == row-1 && j == col-1) || (i == row-1 && j == col+1) || (i == row+1 && j == col-1) || (i == row+1 && j == col+1)){
+                        if(document.getElementById(newid).innerHTML == black || document.getElementById(newid).innerHTML == red){
+                            document.getElementById(newid).innerHTML = red;
+                            ok = false;
+                        }
+                    }
+                    if(getComputedStyle(document.getElementById(newid)).backgroundColor == getComputedStyle(cell).backgroundColor){
+                        if(document.getElementById(newid).innerHTML == black || document.getElementById(newid).innerHTML == red){
+                            document.getElementById(newid).innerHTML = red;
+                            ok = false;
+                        }
+                    }
+                }
+            }
+            return ok;
+        }
+    
+        function start(){
+            document.getElementById("start").style.display = "none";
+            document.getElementById("game-table").style.display = "table";
+            document.getElementById("time-text").style.display = "inline"
+            document.getElementById("time").style.display = "inline";
+            document.getElementById("reset").style.display = "inline"
+            increment();
+        }
+
+        function increment(){
+            timer = setTimeout(function(){
+                time++;
+                var minutes = Math.floor(time/60);
+                var seconds = Math.floor(time%60);
+                if(minutes < 10)
+                    minutes = "0" + minutes;
+                if(seconds < 10)
+                    seconds = "0" + seconds;
+                document.getElementById("time").innerHTML = minutes + ":" + seconds;
+                increment();
+            }, 1000)
+        }
+
+        function listen(){
+                    if(this.innerHTML == ""){
+                        this.innerHTML =  '<img src="images/x.png" class="image">';
+                    }
+                    else if(this.innerHTML == '<img src="images/x.png" class="image">'){
+                        queens++;
+                        if(check(this)){
+                            this.innerHTML =  '<img src="images/queen-black.png" class="image">';
+                            if(queens == 7){
+                                clearTimeout(timer);
+                                setTimeout(function(){
+                                    alert("You win! Your time: " + document.getElementById("time").innerText);
+                                }, 10);
+                                disable();
+                            }
+                        }
+                        else
+                            this.innerHTML =  '<img src="images/queen-red.png" class="image">';
+                    }
+                    else{
+                        queens--;
+                        this.innerHTML =  '';
+                        for(var k = 1; k <= 8; k++){
+                            for(var l = 1; l <= 8; l++){
+                                if(document.getElementById("td" + k + "" + l).innerHTML ==  '<img src="images/queen-red.png" class="image">' && check(document.getElementById("td" + k + "" + l))){
+                                    document.getElementById("td" + k + "" + l).innerHTML =  '<img src="images/queen-black.png" class="image">';
+                                }
+                            }
+                        }
+                    }
+                }
+
+        function reset(){
+            var cells = document.getElementById("game-table").getElementsByTagName("td");
+            for(var i = 0; i < cells.length; i++){
+                cells[i].innerHTML = "";
+            }
+            queens = 0;
+        }
+
+        function disable(){
+            for(var i = 1; i <= 8; i++){
+                for(var j = 1; j <= 8; j++){
+                    var id = "td" + i + "" + j;
+                    document.getElementById(id).removeEventListener("click", listen);
+                }
+            }
+            document.getElementById("reset").setAttribute("onclick", "");
+        }
+
+        
+    </script>
     <h1 class="header">Queens</h1>
     <h4 class="header">This is my try in re-creating the Queens game from LinkedIn</h4>
     
@@ -18,10 +134,10 @@
             <li>Every queen needs to be positioned so that no other queen is in the same row, column or section</li>
             <li>Two queens can't be next to each other, not even diagonally</li>
             <li>Click once for an 'x' marker, click once more to set the queen, click on the queen to remove it</li>
-            <li>Don't forget to have fun</li>
+            <li>Don't forget to have fun! Ready? Click the button &darr;</li>
         </ul>
-        <button id="start" click="start()">Start the game</button>
-        <table id="game-table">
+        <input type="button" id="start" class="button" onclick="start()" value="Start the game"/>
+        <table id="game-table" class="game">
             <tr>
                 <td id="td11"></td>
                 <td id="td12"></td>
@@ -102,7 +218,18 @@
                 <td id="td87"></td>
                 <td id="td88"></td>
             </tr>
-        </table>
+        </table><br/>
+        <label id="time-text" for="time" class="game">Time:</label> <label id="time" class="game">00:00</label><br/>
+        <input type="button" id="reset" class="button game" onclick="reset()" value="Reset table"/>
     </div>
+    <script>
+        queens = 0;
+        for(var i = 1; i <= 8; i++){
+            for(var j = 1; j <= 8; j++){
+                var id = "td" + i + "" + j;
+                document.getElementById(id).addEventListener("click", listen);
+            }
+        }
+    </script>
 </body>
 </html>
