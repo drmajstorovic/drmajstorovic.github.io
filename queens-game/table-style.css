@@ -1,0 +1,65 @@
+/* pink section */
+#td11, #td12, #td13, #td14, #td21, #td22, #td23 {
+    background-color: #E6B4B3;
+}
+
+/* --------------------- */
+/* yellow section */
+#td15, #td24, #td25 {
+    background-color: #DBE2A7;
+}
+
+/* --------------------- */
+/* orange section */
+
+#td17, #td18, #td27, #td28, #td37, #td38, #td48, #td58, #td68, #td78, #td87, #td88 {
+    background-color: #E0C9A3;
+}
+
+/* --------------------- */
+/* lime section */
+#td66, #td76, #td75, #td86 {
+    background-color: #BCE2A7;
+}
+
+/* --------------------- */
+/* green section */
+#td16, #td26, #td32, #td33, #td34, #td35, #td36, #td43, #td44, #td45, #td54, #td55, #td65 {
+    background-color: #85D6AC;
+}
+
+/* --------------------- */
+/* blue section */
+#td31, #td41, #td42, #td51, #td52, #td53, #td61, #td62, #td63, #td64, #td71, #td72, #td73, #td74, #td81, #td82, #td83, #td84, #td85{
+    background-color: #94CFDB;
+}
+
+/* --------------------- */
+/* grey section */
+#td46, #td47, #td56, #td57, #td67, #td77 {
+    background-color: #AAAAAA;
+}
+
+/* left */
+#td11, #td21, #td31, #td41, #td51, #td61, #td71, #td81, #td15, #td24, #td16, #td26, #td17, #td27, #td37, #td32, 
+#td43, #td54, #td65, #td46, #td56, #td66, #td75, #td86, #td48, #td58, #td68, #td78, #td67, #td77, #td87 {
+    border-left: 2px solid black;
+}
+
+/* up */
+#td11, #td12, #td13, #td14, #td15, #td16, #td17, #td18, #td24, #td31, #td32, #td33, #td34, #td35, #td42, #td46, #td47, 
+#td53, #td64, #td66, #td75, #td87 {
+    border-top: 2px solid black;
+}
+
+/* right */
+#td18, #td28, #td38, #td48, #td58, #td68, #td78, #td88, #td14, #td15, #td16, #td23, #td25, #td26, #td31, #td36, 
+#td42, #td45, #td47, #td53, #td55, #td57, #td64, #td65, #td66, #td67, #td74, #td76, #td77, #td85, #td86 {
+    border-right: 2px solid black;
+}
+
+/* down */
+#td81, #td82, #td83, #td84, #td85, #td86, #td87, #td88, #td14, #td21, #td22, #td23, #td24, #td25, #td32, #td36, #td37, 
+#td43, #td54, #td56, #td65, #td75, #td77 {
+    border-bottom: 2px solid black;
+}

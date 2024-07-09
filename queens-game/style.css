@@ -26,11 +26,11 @@ body {
 
 table{
     margin: auto;
-    border: 2px black solid;
+    border: 3px black solid;
 }
 
 td {
-    border: 1px solid black;
+    border: 1px solid gray;
     width: 40px;
     height: 40px;
 }
@@ -49,4 +49,11 @@ td {
     background-color: #C9ABE3;
     color: black;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #game-div {
+        width: 90%;
+        padding: 20px;
+    }
 }
