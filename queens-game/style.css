@@ -29,6 +29,11 @@ table{
     margin: auto;
     border: 3px black solid;
     border-spacing: 0;
+    display: none;
+}
+
+th {
+    display: none;
 }
 
 td {

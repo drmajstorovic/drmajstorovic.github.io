@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Queens by Gaga</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="table-style.css">
+    <link rel="stylesheet" href="table-1-style.css" id="table-style">
     <link rel="icon" href="images/queen-black.png">
 </head>
 <body>
     <script>
         var time = 0;
+        let timer;
+        let queens = 0;
         
         function check(cell){
             var id = cell.getAttribute("id");
@@ -19,12 +21,10 @@
             var ok = true;
             var black =  '<img src="images/queen-black.png" class="image">';
             var red =  '<img src="images/queen-red.png" class="image">'
-            let timer;
 
             for(let i = 1; i <= 8; i++){
                 for(let j = 1; j <= 8; j++){
                     var newid = "td" + i + "" + j;
-                    var c = document.getElementById(newid);
                     if(i == row && j == col)
                         continue;
                     if(i == row || j == col){
@@ -53,9 +53,9 @@
         function start(){
             document.getElementById("start").style.display = "none";
             document.getElementById("game-table").style.display = "table";
-            document.getElementById("time-text").style.display = "inline"
+            document.getElementById("time-text").style.display = "inline";
             document.getElementById("time").style.display = "inline";
-            document.getElementById("reset").style.display = "inline"
+            document.getElementById("reset").style.display = "inline";
             increment();
         }
 
@@ -81,7 +81,7 @@
                         queens++;
                         if(check(this)){
                             this.innerHTML =  '<img src="images/queen-black.png" class="image">';
-                            if(queens == 7){
+                            if(queens == 8){
                                 clearTimeout(timer);
                                 setTimeout(function(){
                                     alert("You win! Your time: " + document.getElementById("time").innerText);
@@ -107,8 +107,8 @@
 
         function reset(){
             var cells = document.getElementById("game-table").getElementsByTagName("td");
-            for(var i = 0; i < cells.length; i++){
-                cells[i].innerHTML = "";
+            for(const element of cells){
+                element.innerHTML = "";
             }
             queens = 0;
         }
@@ -137,7 +137,8 @@
             <li>Don't forget to have fun! Ready? Click the button &darr;</li>
         </ul>
         <input type="button" id="start" class="button" onclick="start()" value="Start the game"/>
-        <table id="game-table" class="game">
+        <table id="game-table">
+            <th></th>
             <tr>
                 <td id="td11"></td>
                 <td id="td12"></td>
@@ -219,11 +220,11 @@
                 <td id="td88"></td>
             </tr>
         </table><br/>
+        <label id="difficulty-text" for="difficulty" class="game">difficulty:</label> <label id="difficulty" class="game"></label><br/>
         <label id="time-text" for="time" class="game">Time:</label> <label id="time" class="game">00:00</label><br/>
         <input type="button" id="reset" class="button game" onclick="reset()" value="Reset table"/>
     </div>
     <script>
-        queens = 0;
         for(var i = 1; i <= 8; i++){
             for(var j = 1; j <= 8; j++){
                 var id = "td" + i + "" + j;

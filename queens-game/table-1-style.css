@@ -1,0 +1,75 @@
+/* pink section */
+#td23, #td25, #td26, #td27, #td33, #td34, #td35, #td36, #td42, #td43, #td44, #td52, #td53, #td54, #td62, #td63, #td72, #td73 {
+    background-color: #E6B4B3;
+}
+
+/* --------------------- */
+/* yellow section */
+#td13, #td14, #td15, #td16, #td17, #td18, #td28, #td24 {
+    background-color: #DBE2A7;
+}
+
+/* --------------------- */
+/* orange section */
+
+#td11, #td21, #td31, #td41, #td51, #td61, #td71, #td81, #td82, #td83 {
+    background-color: #E0C9A3;
+}
+
+/* --------------------- */
+/* lime section */
+#td67, #td77, #td85, #td86, #td87 {
+    background-color: #BCE2A7;
+}
+
+/* --------------------- */
+/* green section */
+#td28, #td37, #td38, #td46, #td47, #td48 {
+    background-color: #85D6AC;
+}
+
+/* --------------------- */
+/* blue section */
+#td12, #td22, #td32{
+    background-color: #94CFDB;
+}
+
+/* --------------------- */
+/* gray section */
+#td56, #td57, #td58, #td68, #td78, #td88 {
+    background-color: #cccccc;
+}
+
+/* --------------------- */
+/* brown section */
+#td45, #td55, #td64, #td65, #td66, #td74, #td75, #td76, #td84 {
+    background-color: #D7A388;
+}
+
+/* --------------------- */
+/* cell borders */
+/* left */
+#td11, #td21, #td31, #td41, #td51, #td61, #td71, #td81, #td12, #td22, #td32, #td42, #td52, #td62, #td72, #td13, #td23, 
+#td33, #td24, #td64, #td74, #td84, #td25, #td45, #td55, #td85, #td46, #td56, #td37, #td67, #td77, #td28, #td68, #td78, 
+#td88 {
+    border-left: 1px solid black;
+}
+
+/* up */
+#td11, #td12, #td13, #td14, #td15, #td16, #td17, #td18, #td23, #td25, #td26, #td27, #td28, #td34, #td37, #td42, #td45, 
+#td46, #td56, #td57, #td58, #td64, #td66, #td67, #td82, #td83, #td85, #td86 {
+    border-top: 1px solid black;
+}
+
+/* right */
+#td18, #td28, #td38, #td48, #td58, #td68, #td78, #td88, #td11, #td12, #td21, #td22, #td23, #td24, #td27, #td31, #td32, 
+#td36, #td41, #td44, #td45, #td51, #td54, #td55, #td61, #td63, #td66, #td67, #td71, #td73, #td76, #td77, #td83, #td84, 
+#td87 {
+    border-right: 1px solid black;
+}
+
+/* down */
+#td81, #td82, #td83, #td84, #td85, #td86, #td87, #td88, #td13, #td15, #td16, #td17, #td18, #td24, #td32, #td35, #td36, 
+#td46, #td47, #td48, #td54, #td56, #td57, #td72, #td73, #td75, #td76 {
+    border-bottom: 1px solid black;
+}
