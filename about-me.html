@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragana - About me</title>
-    <link href="navbar-style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="navbar-style.css" rel="stylesheet">
+    <link href="about-me-style.css" rel="stylesheet">
     <link rel="icon" href="images/icon.ico">
 </head>
 <body>
@@ -14,17 +15,40 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="my-projects.html">My projects</a></li>
-                <li><a>Gallery</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     <div id="about">
         <h2>Hello there!</h2>
-        <p>&nbsp&nbsp My name is Dragana. I am a young software developer, still at the beginning of my IT career. I have studied information technology in 
-            high school for electrical engineering for 4 years  and computer science at faculty for natural sciences and mathematics for 3 years 
-            (and counting). I am also fluent in English (B2-C1).</p>
-        <p>&nbsp&nbsp During 7 years of education, I learnt how to write tidy code that is readable and easy to understand, while, of course, following all the 
-            conventions and practices for the given language.</p>
+        <div id="about-content">
+            <div id="about-text">
+                <p>&nbsp&nbsp My name is Dragana. I am a young software developer, still at the beginning of my IT career. When people meet me for the first 
+                    time, I may appear shy and quiet, but I tend to open up after short chit-chatting about the topics that I am interested in. I enjoy various activities 
+                    in my spare time, including reading books and articles, playing Minecraft, baking, swimming, cycling, walking, etc.</p>
+                <p>&nbsp&nbsp During 7 years of education, I learnt how to write tidy code that is readable and easy to understand, while, of course, following all the 
+                    conventions and practices for the given language. You can find more about what I know in the sections below.</p>
+            </div>
+            <img id="image-me" src="images/me.jpg"alt="Dragana Majstorović"title="My selfie">
+        </div>
+    </div>
+    <br>
+    <button id="education-button" class="collapse show">Education</button>
+        <div id="education" class="section">
+            <div id="university">
+                    <h3>- Bachelor in computer science</h3>
+                    <h4>Faculty for Natural Sciences and Mathematics, University of Banja Luka (2021 - )</h4>
+                    <h4>Bachelor's degree in computer science</h4>
+            </div>
+            <div id="high-school">
+                    <h3>- Information technology technician</h3>
+                    <h4>High School for Electrical Engineering, Prijedor (2017 - 2021)</h4>
+                    <h4>High scool graduate - 4th degree</h4>
+            </div>
+        </div>
+    <br>
+    <button id="skills-button" class="collapse show">Skills</button>
+    <div id="skills" class="section">
         <p>Here are some skills that I gained through my education:</p>
         <ul>
             <li>Functional programming</li>
@@ -38,7 +62,12 @@
             <li>Algorithms</li>
             <li>Relational databases</li>
             <li>Microsoft Office (Word, Excel, PowerPoint, Access)</li>
+            <li><b>English (B2-C1)</b></li>
         </ul>
+    </div>
+    <br>
+    <button id="languages-button" class="collapse show">Programming languages</button>
+    <div id="languages" class="section">
         <p>And here are all the programming and scripting languages I know so far:</p>
         <ul>
             <li>C, C++, C# (with .NET)</li>
@@ -50,6 +79,10 @@
             <li>PHP</li>
             <li>SQL</li>
         </ul>
+    </div>
+    <br>
+    <button id="software-button" class="collapse show">Software</button>
+    <div id="software" class="section">
         <p>Here is the list of software and tools I've worked with:</p>
         <ul>
             <li>Git</li>
@@ -65,9 +98,33 @@
             <li>XAMPP</li>
             <li>Cisco Packet Tracer</li>
             <li>Siemens LOGO Soft</li>
-            <li>Corel Draw</li>
         </ul>
-        <img id="image-me" src="images/me.jpg"alt="Dragana Majstorović"title="My selfie">
     </div>
+    <script>
+        var coll = document.getElementsByClassName("collapse");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle('show');
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.color = "#A6A3E0";
+                content.style.padding = "0px";
+                content.style.maxHeight = null;
+                this.style.borderRadius = "75px";
+            } else {
+                content.style.color = "black";
+              content.style.maxHeight = "500px";
+              content.style.padding = "70px";
+              content.style.paddingTop = "30px";
+              this.style.borderBottomLeftRadius = 0;
+              this.style.borderBottomRightRadius = 0;
+              this.style.borderTopLeftRadius = "35px";
+              this.style.borderTopRightRadius = "35px";
+            }
+          });
+        }
+        </script>
 </body>
 </html>
