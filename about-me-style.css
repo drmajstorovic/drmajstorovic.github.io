@@ -38,21 +38,21 @@
     width: 50%;
     display: block;
     margin: auto;
-    border-radius: 75px;
+    border-radius: 40px;
     background-color: #A6A3E0;
     color: black;
-    padding: 25px;
-    padding-left: 45px;
-    text-align: left;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     outline: none;
     border-width: 0;
+    padding: 25px;
 }
 
 .show {
-    transition: border-bottom-left-radius 0.3s 0.3s , border-bottom-left-radius 0.3s 0.3s;
+    transition: border-bottom-right-radius 0.3s 0.3s, border-bottom-left-radius 0.3s 0.3s;
+
 }
 
 .section {
@@ -79,35 +79,47 @@
 
 @media screen and (max-width: 1360px) {
 
-    #about, .collapse, .section {
+    #about, .collapse {
         width: 60%;
         border-radius: 50px;
     }
 
+    .section {
+        width: 60%;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+
     #about-content, #about-text, #image-me {
         display: block;
+        margin: auto;
     }
 
     #about-content, #image-me {
-        padding: 20px;
+        padding: 0px;
         margin: auto;
     }
 
     #about-text {
         width: 100%;
+        padding: 0%;
     }
 }
 
 @media screen and (max-width: 800px) {
     #about, .collapse {
-        width: 80%;
-        padding: 30px;
+        width: 90%;
+        padding: 15px;
         border-radius: 40px;
         display: block;
     }
 
+    #about-text{
+        width: 100%;
+        padding: 0%;
+    }
+
     .section {
-        width: 80%;
-        border-radius: 40px;
+        width: 90%;
     }
 }

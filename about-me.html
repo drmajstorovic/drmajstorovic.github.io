@@ -112,7 +112,10 @@
                 content.style.color = "#A6A3E0";
                 content.style.padding = "0px";
                 content.style.maxHeight = null;
-                this.style.borderRadius = "75px";
+              this.style.borderBottomLeftRadius = "75px";
+              this.style.borderBottomRightRadius = "75px";
+              this.style.borderTopLeftRadius = "75px";
+              this.style.borderTopRightRadius = "75px";
             } else {
                 content.style.color = "black";
               content.style.maxHeight = "500px";
@@ -120,8 +123,8 @@
               content.style.paddingTop = "30px";
               this.style.borderBottomLeftRadius = 0;
               this.style.borderBottomRightRadius = 0;
-              this.style.borderTopLeftRadius = "35px";
-              this.style.borderTopRightRadius = "35px";
+              this.style.borderTopLeftRadius = "75px";
+              this.style.borderTopRightRadius = "75px";
             }
           });
         }
