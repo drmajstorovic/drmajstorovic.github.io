@@ -37,6 +37,12 @@
     color: black;
 }
 
+.current {
+    background-color: #A6A3E0 !important;
+    color: black !important;
+    padding: 17px !important;
+}
+
 @media screen and (max-width: 800px) {
     #navbar li{
         display: block;
