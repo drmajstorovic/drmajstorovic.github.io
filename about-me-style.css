@@ -69,13 +69,12 @@
     transition: max-height 0.3s ease;
 }
 
-#education h3 {
+h3 {
     text-align: left;
 }
 
-#education h4 {
+h4 {
     font-weight: 200;
-    color: black;
 }
 
 @media screen and (max-width: 1360px) {
