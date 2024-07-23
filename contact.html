@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragana - contact</title>
+    <title>Dragana - Contact</title>
     <link href="navbar-style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="contact-style.css" rel="stylesheet">
     <link rel="icon" href="images/icon.ico">
 </head>
 <body>
-     <nav id="navbar">
+    <div id="particles">
+        <nav id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about-me.html">About me</a></li>
@@ -18,8 +20,54 @@
                 <li><a href="contact.html" class="current">Contact</a></li>
             </ul>
         </nav>
-    <div id="welcome">
-        <h1>Coming soon...</h1>
+    <div id="contact">
+        <h2>Do you want to tell me something?</h2>
+        <h2>Do you want ME to tell YOU something?</h2>
+        <h3>Don't hesitate to reach me!</h3>
+        <div id="contact-tabs">
+            <div id="tab-1" class="tab">
+                <h3>Send me an email</h3><br><br>
+                <a href="mailto:draganamajstorovic02@yahoo.com" target="_blank">draganamajstorovic02@yahoo.com</a><br><br>
+                <img src="images/email.png" alt="email icon">
+            </div>
+            <div id="tab-2" class="tab">
+                <h3>Let's connect</h3><br><br>
+                Check out my <a href="https://www.linkedin.com/in/dragana-majstorovic-361b28176" target="_blank">LinkedIn profile</a>.<br>I would appreciate new connection.
+                <img src="images/linkedin.png" alt="LinkedIn icon">
+            </div>
+            <div id="tab-3" class="tab">
+                <h3>Call/text me</h3><br><br>
+                <a href="tel:+38766957235">+387 66 957 235</a><br>
+                <i>(Viber, Whats App, Telegram)</i>
+                <img src="images/phone-call.png" alt="phone icon">
+            </div>
+        </div>
     </div>
+    <footer>Made by Dragana with love &lt;3</footer>
+    </div>
+    <script>
+        const particlesContainer = document.getElementById('particles');
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particlesContainer.appendChild(particle);
+            setTimeout(() => {
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.boxShadow = "0 0 4px 4px #A6A3E0";
+                setTimeout(() => {
+                    particle.style.boxShadow = "0 0 0px 0px #A6A3E0";
+                }, 1000)
+                setTimeout(() => {
+                    particle.remove();
+                }, 4000);
+            }, 1000);
+        }
+
+        setInterval(createParticle, 100);
+    </script>
 </body>
 </html>

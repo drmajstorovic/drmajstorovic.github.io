@@ -1,0 +1,63 @@
+#contact {
+    text-align: center;
+}
+
+#contact-tabs div {
+    display: inline-block;
+    width: 350px;
+    height: 400px;
+    background-color: #A6A3E0;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 55px;
+    vertical-align: top;
+    z-index: 3;
+    transition: all 0.5s ease;
+}
+
+#contact-tabs div:hover {
+    border: 2px solid #BEBFE9;
+    box-shadow: 0 0 15px 10px #C9ABE3;
+}
+
+#contact-tabs {
+    position: relative;
+    padding: 0%;
+    margin: auto;
+    line-height: 24px;
+    z-index: 3;
+}
+
+#contact-tabs a {
+    background-color: #C9ABE3;
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 55px;
+}
+
+#contact-tabs img {
+    display: block;
+    width: 90px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer {
+    display: block;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px;
+}
+
+@media screen and (max-width: 1150px) {
+    #contact-tabs div {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+}
+}

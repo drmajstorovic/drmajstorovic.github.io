@@ -18,6 +18,8 @@
     display: inline;
     font-size: 20px;
     margin: 15px;
+    position: relative;
+    z-index: 3;
 }
 
 #navbar a {
@@ -29,6 +31,7 @@
     height: auto;
     padding: 15px;
     border-radius: 75px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #navbar a:hover{
