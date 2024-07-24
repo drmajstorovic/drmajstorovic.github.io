@@ -13,6 +13,7 @@ body {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    overflow: hidden;
 }
 
 #welcome {
@@ -25,16 +26,24 @@ body {
     z-index: 3;
 }
 
-#welcome h1 {
-    color: white;
-    font-style: bold;
-    z-index: 3;
+.before h1, h3 {
+    font-size: 2px;
+    color: transparent;
 }
 
-#welcome h3 {
+.after h1 {
+    font-size: 30px;
     color: white;
-    font-style: italic;
+}
+
+.after h3 {
+    font-size: 18px;
+    color: white;
+}
+
+#welcome h1, h3 {
     z-index: 3;
+    transition: font-size 3.0s ease, color 5.0s ease;
 }
 
 #my-projects {
@@ -87,7 +96,6 @@ body {
     width: 100%;
     height: max-content;
     z-index: 1;
-    overflow: hidden;
 }
 
 .particle {

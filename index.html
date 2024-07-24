@@ -21,11 +21,18 @@
         </nav>
     <div id="welcome">
         <h1>Welcome, visitor!</h1>
-        <h3>Hello, my name is Dragana, but friends call me Gaga.<br/>This is my portfolio website. Here you can learn more about me and my skills.<br/>Have fun!</h3>
+        <h3>Hello, my name is Dragana, but friends call me Gaga.<br/>This is my portfolio website.<br>Here you can learn more about me and my skills.<br/>Have fun!</h3>
     </div>
     </div>
     <script>
         const particlesContainer = document.getElementById('particles');
+
+        document.getElementById("welcome").classList.toggle("before");
+        setTimeout(() => {
+            
+        document.getElementById("welcome").classList.toggle("before");
+        document.getElementById("welcome").classList.toggle("after");
+        }, 50);
 
         function createParticle() {
             const particle = document.createElement('div');
