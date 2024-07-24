@@ -139,4 +139,12 @@ body {
         overflow-x: hidden;
         overflow-y: hidden;
     }
+
+    .before h1 {
+        font-size: 30px;
+    }
+
+    .before h3 {
+        font-size: 18px;;
+    }
 }
