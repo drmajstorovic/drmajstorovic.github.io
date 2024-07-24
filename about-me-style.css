@@ -47,7 +47,7 @@
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    border-width: 0;
+    border: none;
     padding: 25px;
     z-index: 3;
 }
@@ -79,6 +79,9 @@ h4 {
 }
 
 @media screen and (max-width: 1360px) {
+    body {
+        overflow: auto !important;
+    }
 
     #about, .collapse {
         width: 60%;
