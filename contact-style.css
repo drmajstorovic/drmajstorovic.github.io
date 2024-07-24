@@ -1,5 +1,13 @@
+body {
+    overflow: hidden;
+}
+
 #contact {
     text-align: center;
+}
+
+#contact h2, h3 {
+    z-index: 3;
 }
 
 #contact-tabs div {
@@ -60,4 +68,8 @@ footer {
         margin: auto;
         margin-top: 20px;
 }
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 }
