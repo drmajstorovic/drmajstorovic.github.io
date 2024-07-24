@@ -43,7 +43,7 @@ body {
     z-index: 3;
 }
 
-.before h1, h3 {
+.before h1,.before h3 {
     font-size: 2px;
     color: transparent;
 }
@@ -58,7 +58,7 @@ body {
     color: white;
 }
 
-#welcome h1, h3 {
+#welcome h1,#welcome h3 {
     z-index: 3;
     transition: font-size 3.0s ease, color 5.0s ease;
 }

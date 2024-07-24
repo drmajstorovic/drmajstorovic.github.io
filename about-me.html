@@ -10,124 +10,155 @@
     <link rel="icon" href="images/icon.ico">
 </head>
 <body>
-     <nav id="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-me.html" class="current">About me</a></li>
-                <li><a href="my-projects.html">My projects</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    <div id="about">
-        <h2>Hello there!</h2>
-        <div id="about-content">
-            <div id="about-text">
-                <p>&nbsp&nbsp My name is Dragana. I am a young software developer, still at the beginning of my IT career. When people meet me for the first 
-                    time, I may appear shy and quiet, but I tend to open up after short chit-chatting about the topics that I am interested in. I enjoy various activities 
-                    in my spare time, including reading books and articles, playing Minecraft, baking, swimming, cycling, walking, etc.</p>
-                <p>&nbsp&nbsp During 7 years of education, I learnt how to write tidy code that is readable and easy to understand, while, of course, following all the 
-                    conventions and practices for the given language. You can find more about what I know in the sections below.</p>
+    <div id="container">
+        <div id="particles">
+        </div>
+        <div id="content">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html" class="current">About me</a></li>
+                    <li><a href="my-projects.html">My projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="about">
+                <h2>Hello there!</h2>
+                <div id="about-content">
+                    <div id="about-text">
+                        <p>&nbsp&nbsp My name is Dragana. I am a young software developer, still at the beginning of my IT career. When people meet me for the first 
+                            time, I may appear shy and quiet, but I tend to open up after short chit-chatting about the topics that I am interested in. I enjoy various activities 
+                            in my spare time, including reading books and articles, playing Minecraft, baking, swimming, cycling, walking, etc.</p>
+                        <p>&nbsp&nbsp During 7 years of education, I learnt how to write tidy code that is readable and easy to understand, while, of course, following all the 
+                            conventions and practices for the given language. You can find more about what I know in the sections below.</p>
+                    </div>
+                    <img id="image-me" src="images/me.jpg"alt="Dragana Majstorović"title="My selfie">
+                </div>
             </div>
-            <img id="image-me" src="images/me.jpg"alt="Dragana Majstorović"title="My selfie">
+            <br>
+            <button id="education-button" class="collapse show">Education</button>
+            <div id="education" class="section">
+                <div id="university">
+                        <h3>- Bachelor in computer science</h3>
+                        <h4>Faculty for Natural Sciences and Mathematics, University of Banja Luka (2021 - )</h4>
+                        <h4>Bachelor's degree in computer science</h4>
+                </div>
+                <div id="high-school">
+                        <h3>- Information technology technician</h3>
+                        <h4>High School for Electrical Engineering, Prijedor (2017 - 2021)</h4>
+                        <h4>High scool graduate - 4th degree</h4>
+                </div>
+            </div>
+            <br>
+            <button id="skills-button" class="collapse show">Skills</button>
+            <div id="skills" class="section">
+                <p>Here are some skills that I gained through my education:</p>
+                <ul>
+                    <li>Functional programming</li>
+                    <li>Procedural programming</li>
+                    <li>Object-oriented programming</li>
+                    <li>Web programming</li>
+                    <li>Web design</li>
+                    <li>Networking</li>
+                    <li>Operating systems</li>
+                    <li>Data structures</li>
+                    <li>Algorithms</li>
+                    <li>Relational databases</li>
+                    <li>Microsoft Office (Word, Excel, PowerPoint, Access)</li>
+                    <li><b>English (B2-C1)</b></li>
+                </ul>
+            </div>
+            <br>
+            <button id="languages-button" class="collapse show">Programming languages</button>
+            <div id="languages" class="section">
+                <p>Here are all the programming and scripting languages I know so far:</p>
+                <ul>
+                <li>C, C++, C# (with .NET)</li>
+                    <li>Java (with JavaFX/FXML)</li>
+                    <li>Kotlin</li>
+                    <li>Python</li>
+                    <li>HTML, CSS</li>
+                    <li>Java Script</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <br>
+            <button id="software-button" class="collapse show">Software</button>
+            <div id="software" class="section">
+                <p>Here is the list of software and tools I've worked with:</p>
+                <ul>
+                    <li>Git</li>
+                    <li>Visual Studio</li>
+                    <li>Visual Studio Code</li>
+                    <li>WordPress</li>
+                    <li>Eclipse</li>
+                    <li>IntelliJ</li>
+                    <li>PyCharm</li>
+                    <li>Spyder (Anaconda)</li>
+                    <li>Code::Blocks</li>
+                    <li>MATLAB</li>
+                    <li>XAMPP</li>
+                    <li>Cisco Packet Tracer</li>
+                    <li>Siemens LOGO Soft</li>
+                </ul>
+            </div>
         </div>
     </div>
-    <br>
-    <button id="education-button" class="collapse show">Education</button>
-        <div id="education" class="section">
-            <div id="university">
-                    <h3>- Bachelor in computer science</h3>
-                    <h4>Faculty for Natural Sciences and Mathematics, University of Banja Luka (2021 - )</h4>
-                    <h4>Bachelor's degree in computer science</h4>
-            </div>
-            <div id="high-school">
-                    <h3>- Information technology technician</h3>
-                    <h4>High School for Electrical Engineering, Prijedor (2017 - 2021)</h4>
-                    <h4>High scool graduate - 4th degree</h4>
-            </div>
-        </div>
-    <br>
-    <button id="skills-button" class="collapse show">Skills</button>
-    <div id="skills" class="section">
-        <p>Here are some skills that I gained through my education:</p>
-        <ul>
-            <li>Functional programming</li>
-            <li>Procedural programming</li>
-            <li>Object-oriented programming</li>
-            <li>Web programming</li>
-            <li>Web design</li>
-            <li>Networking</li>
-            <li>Operating systems</li>
-            <li>Data structures</li>
-            <li>Algorithms</li>
-            <li>Relational databases</li>
-            <li>Microsoft Office (Word, Excel, PowerPoint, Access)</li>
-            <li><b>English (B2-C1)</b></li>
-        </ul>
-    </div>
-    <br>
-    <button id="languages-button" class="collapse show">Programming languages</button>
-    <div id="languages" class="section">
-        <p>Here are all the programming and scripting languages I know so far:</p>
-        <ul>
-            <li>C, C++, C# (with .NET)</li>
-            <li>Java (with JavaFX/FXML)</li>
-            <li>Kotlin</li>
-            <li>Python</li>
-            <li>HTML, CSS</li>
-            <li>Java Script</li>
-            <li>PHP</li>
-            <li>SQL</li>
-        </ul>
-    </div>
-    <br>
-    <button id="software-button" class="collapse show">Software</button>
-    <div id="software" class="section">
-        <p>Here is the list of software and tools I've worked with:</p>
-        <ul>
-            <li>Git</li>
-            <li>Visual Studio</li>
-            <li>Visual Studio Code</li>
-            <li>WordPress</li>
-            <li>Eclipse</li>
-            <li>IntelliJ</li>
-            <li>PyCharm</li>
-            <li>Spyder (Anaconda)</li>
-            <li>Code::Blocks</li>
-            <li>MATLAB</li>
-            <li>XAMPP</li>
-            <li>Cisco Packet Tracer</li>
-            <li>Siemens LOGO Soft</li>
-        </ul>
-    </div>
+   
     <script>
+
+        const particlesContainer = document.getElementById('particles');
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particlesContainer.appendChild(particle);
+            setTimeout(() => {
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.boxShadow = "0 0 4px 4px #A6A3E0";
+                setTimeout(() => {
+                    particle.style.boxShadow = "0 0 0px 0px #A6A3E0";
+                }, 1000)
+                setTimeout(() => {
+                    particle.remove();
+                }, 4000);
+            }, 1000);
+        }
+
         var coll = document.getElementsByClassName("collapse");
         var i;
         
         for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle('show');
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-                content.style.color = "#A6A3E0";
-                content.style.padding = "0px";
-                content.style.maxHeight = null;
-              this.style.borderBottomLeftRadius = "75px";
-              this.style.borderBottomRightRadius = "75px";
-              this.style.borderTopLeftRadius = "75px";
-              this.style.borderTopRightRadius = "75px";
-            } else {
-                content.style.color = "black";
-              content.style.maxHeight = "500px";
-              content.style.padding = "70px";
-              content.style.paddingTop = "30px";
-              this.style.borderBottomLeftRadius = 0;
-              this.style.borderBottomRightRadius = 0;
-              this.style.borderTopLeftRadius = "75px";
-              this.style.borderTopRightRadius = "75px";
-            }
-          });
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle('show');
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.color = "#A6A3E0";
+                    content.style.padding = "0px";
+                    content.style.maxHeight = null;
+                    this.style.borderBottomLeftRadius = "75px";
+                    this.style.borderBottomRightRadius = "75px";
+                    this.style.borderTopLeftRadius = "75px";
+                    this.style.borderTopRightRadius = "75px";
+                } else {
+                    content.style.color = "black";
+                    content.style.maxHeight = "500px";
+                    content.style.padding = "70px";
+                    content.style.paddingTop = "30px";
+                    this.style.borderBottomLeftRadius = 0;
+                    this.style.borderBottomRightRadius = 0;
+                    this.style.borderTopLeftRadius = "75px";
+                    this.style.borderTopRightRadius = "75px";
+                }
+            });
         }
-        </script>
-</body>
+        
+        setInterval(createParticle, 100);
+    </script>
+    </body>
 </html>

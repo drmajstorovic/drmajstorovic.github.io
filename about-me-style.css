@@ -9,6 +9,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 
 #about-content {
@@ -48,11 +49,11 @@
     outline: none;
     border-width: 0;
     padding: 25px;
+    z-index: 3;
 }
 
 .show {
     transition: border-bottom-right-radius 0.3s 0.3s, border-bottom-left-radius 0.3s 0.3s;
-
 }
 
 .section {
@@ -60,13 +61,13 @@
     border-radius: 75px;
     width: 50%;
     background-color: #A6A3E0;
-    color: black;
     text-align: left;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    z-index: 3;
 }
 
 h3 {
