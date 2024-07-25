@@ -36,8 +36,10 @@
         document.getElementById("welcome").classList.toggle("before");
         setTimeout(() => {
             document.getElementById("welcome").classList.toggle("after");
-            document.getElementById("welcome").classList.toggle("before");
-        }, 100);
+            setTimeout(() => {
+                document.getElementById("welcome").classList.toggle("before");
+            }, 50)
+        }, 50);
 
         function createParticle() {
             const particle = document.createElement('div');
