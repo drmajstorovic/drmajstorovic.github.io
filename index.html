@@ -33,14 +33,6 @@
     <script>
         const particlesContainer = document.getElementById('particles');
 
-        document.getElementById("welcome").classList.toggle("before");
-        setTimeout(() => {
-            document.getElementById("welcome").classList.toggle("after");
-            setTimeout(() => {
-                document.getElementById("welcome").classList.toggle("before");
-            }, 50)
-        }, 50);
-
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
