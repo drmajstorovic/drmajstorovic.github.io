@@ -1,0 +1,46 @@
+#resume {
+    margin: auto;
+    border-radius: 70px;
+    width: 70%;
+    padding: 85px;
+    padding-top: 0%;
+    align-content: center;
+    text-align: center;
+    background-color: #A6A3E0;
+}
+
+#resume-image {
+    width: 100%;
+    border-radius: 60px;
+}
+
+#download {
+    margin: 30px;
+    color: black;
+}
+
+#download a {
+    text-decoration: none;
+    color: #A6A3E0;
+    background-color: #3F1F5C;
+    display: inline-block;
+    border-radius: 75px;
+    border-color: #3F1F5C;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px 30px;
+    margin: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#download a:hover {
+    color: #3F1F5C;
+    background-color: #A6A3E0;
+}
+
+@media screen and (max-width: 1150px) {
+    #resume {
+        width: 90%;
+        padding: 20px;
+    }
+}

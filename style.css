@@ -145,6 +145,14 @@ body{
     z-index: 1;
 }
 
+footer {
+    display: block;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px;
+}
+
 @media screen and (max-width: 800px) {
     #welcome, #my-projects, #project-links {
         width: 90%;

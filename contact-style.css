@@ -54,14 +54,6 @@ body {
     margin-top: 50px;
 }
 
-footer {
-    display: block;
-    width: 100%;
-    bottom: 0px;
-    text-align: center;
-    padding: 3px;
-}
-
 @media screen and (max-width: 1150px) {
     #contact-tabs div {
         display: block;
