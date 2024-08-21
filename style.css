@@ -166,6 +166,11 @@ footer {
         overflow-y: hidden;
     }
 
+    #my-projects, #project-links {
+        width: 80%;
+        border-radius: 40px;
+    }
+
     #welcome h1, #welcome h3 {
         animation: fadeIn 3.0s ease forwards;
     }

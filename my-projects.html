@@ -9,25 +9,55 @@
     <link rel="icon" href="images/icon.ico">
 </head>
 <body>
-     <nav id="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-me.html">About me</a></li>
-                <li><a href="my-projects.html" class="current">My projects</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    <div id="my-projects">
-        <h2>I see you are interested in my work...</h2>
-        <h3>You can see some of it on my <a id="github-link" href="https://github.com/drmajstorovic" target="_blank">GitHub</a>, 
-            and you can even try some web-based projects from below.</h3>
+    <div id="container">
+        <div id="particles"></div>
+        <div id="content">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html">About me</a></li>
+                    <li><a href="my-projects.html" class="current">My projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="my-projects">
+                <h2>I see you are interested in my work...</h2>
+                <h3>You can see some of it on my <a id="github-link" href="https://github.com/drmajstorovic" target="_blank">GitHub</a>, 
+                    and you can even try some web-based projects from below.</h3>
+            </div>
+            <br/>
+            <div id="project-links">
+                <a id="projects-button" href="queens-game/index.html" target="_blank">Queens by Gaga</a>
+            </div>
+        
+            <footer>Made by Dragana with love &lt;3</footer>
+        </div>
     </div>
-    <br/>
-    <div id="project-links">
-        <a id="projects-button" href="queens-game/index.html">Queens by Gaga</a>
-    </div>
-    
-    <footer>Made by Dragana with love &lt;3</footer>
+
+    <script>
+        const particlesContainer = document.getElementById('particles');
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particlesContainer.appendChild(particle);
+            setTimeout(() => {
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.boxShadow = "0 0 4px 4px #A6A3E0";
+                setTimeout(() => {
+                    particle.style.boxShadow = "0 0 0px 0px #A6A3E0";
+                }, 1000)
+                setTimeout(() => {
+                    particle.remove();
+                }, 4000);
+            }, 1000);
+        }
+
+        setInterval(createParticle, 100);
+    </script>
 </body>
 </html>
