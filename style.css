@@ -162,8 +162,7 @@ footer {
 
 @media screen and (max-width: 1150px){
     body {
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: auto;
         padding-bottom: 80px;
     }
 
@@ -174,9 +173,5 @@ footer {
 
     #welcome h1, #welcome h3 {
         animation: fadeIn 3.0s ease forwards;
-    }
-
-    #content {
-        overflow: auto;
     }
 }
