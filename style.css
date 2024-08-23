@@ -5,7 +5,7 @@
 body{
     margin: 0;
     padding: 0;
-    height: max-content;
+    height: 100vh;
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -164,6 +164,7 @@ footer {
     body {
         overflow-x: hidden;
         overflow-y: hidden;
+        padding-bottom: 80px;
     }
 
     #my-projects, #project-links {
