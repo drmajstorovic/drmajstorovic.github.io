@@ -175,4 +175,8 @@ footer {
     #welcome h1, #welcome h3 {
         animation: fadeIn 3.0s ease forwards;
     }
+
+    #content {
+        overflow: auto;
+    }
 }
