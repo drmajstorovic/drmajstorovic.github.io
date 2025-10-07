@@ -1,62 +1,149 @@
 #navbar {
-    background-color: inherit;
-    display: block;
-    width: max-content;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px 30px;
+  z-index: 10;
 }
 
-#navbar ul {
-    list-style-type: none;
-    background-color: inherit;
-    display: block;
-    padding-left: 0%;
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#navbar li {
-    display: inline;
-    font-size: 20px;
-    margin: 15px;
-    position: relative;
-    z-index: 3;
+.nav-logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #A6A3E0;
+  letter-spacing: 2px;
 }
 
-#navbar a {
-    text-decoration: none;
-    text-align: center;
-    background-color: #3F1F5C;
-    color: white;
-    width: auto;
-    height: auto;
-    padding: 15px;
-    border-radius: 75px;
-    transition: background-color 0.5s ease, color 0.5s ease;
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-#navbar a:hover{
-    cursor:pointer;
-    background-color: #A6A3E0;
-    color: black;
+#nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #A6A3E0;
+  transition: width 0.3s ease;
+}
+
+#nav-links a:hover {
+  color: #A6A3E0;
+}
+
+#nav-links a:hover::after {
+  width: 100%;
 }
 
 .current {
-    background-color: #A6A3E0 !important;
-    color: black !important;
-    padding: 17px !important;
+  color: #A6A3E0 !important;
 }
 
-@media screen and (max-width: 800px) {
-    #navbar li{
-        display: block;
-        font-size: 20px;
-        margin: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+@keyframes fadeInNav {
+  from { 
+    opacity: 0;
+    transform: translate(-50%, -20px);
+    filter: blur(8px);
+  }
+  to { 
+    opacity: 1;
+    transform: translate(-50%, 0);
+    filter: blur(0);
+  }
+}
 
-    #navbar a {
-        display: block;
-        width: 250px;
-    }
+#navbar {
+  animation: fadeInNav 0.8s ease-out;
+}
+
+/* ---------- Responsive stil ---------- */
+@media screen and (max-width: 800px) {
+  #navbar {
+    width: 90%;
+    padding: 10px 15px;
+  }
+
+  .menu-btn {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  /* Sakrij linkove po defaultu */
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px 0;
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  /* Kad je meni aktivan */
+  #nav-links.active {
+    display: flex;
+  }
+
+  /* Efekat kad se ikonica pretvori u "X" */
+  .menu-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }

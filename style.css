@@ -32,53 +32,49 @@ body{
 }
 
 #welcome {
-    height: 400px;
-    width: max-content;
-    align-content: center;
-    text-align: center;
-    margin: auto;
-    z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* centrirano po visini */
+  text-align: center;
+  z-index: 3;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
 }
 
-@keyframes growH1 {
-    from {
-        font-size: 2px;
-        color: transparent;
-    }
-    to {
-        font-size: 30px;
-        color: white;
-    }
+#welcome h1 {
+  font-size: 42px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #A6A3E0, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeDown 1.2s ease forwards 0.5s;
 }
 
-@keyframes growH3 {
-    from {
-        font-size: 2px;
-        color: transparent;
-    }
-    to {
-        font-size: 18px;
-        color: white;
-    }
+#welcome h3 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #d8d8d8;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 1.5s ease forwards 1.2s;
 }
 
-@keyframes fadeIn {
-    from {
-        color: transparent;
-    }
-    to {
-        color: white;
-    }
+/* nove animacije */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px) blur(5px); }
+  to { opacity: 1; transform: translateY(0) blur(0); }
 }
 
-#welcome h1{
-    z-index: 3;
-    animation: growH1 3.0s ease forwards;
-}
-
-#welcome h3{
-    z-index: 3;
-    animation: growH3 3.0s ease forwards;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px) blur(5px); }
+  to { opacity: 1; transform: translateY(0) blur(0); }
 }
 
 #my-projects {
