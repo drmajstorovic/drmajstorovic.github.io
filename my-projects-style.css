@@ -1,0 +1,102 @@
+#projects-section {
+  width: 70%;
+  margin: 120px auto;
+  text-align: center;
+  color: white;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+#projects-section .intro {
+  margin-bottom: 50px;
+}
+
+#projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#projects-section h3 {
+  font-weight: 400;
+  color: #cfcdf5;
+  font-size: 1.1rem;
+}
+
+#github-link {
+  color: #a6a3e0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#github-link:hover {
+  text-decoration: underline;
+}
+
+/* GRID LAYOUT */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: rgba(166, 163, 224, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 260px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInCard 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 1.4s; }
+.project-card:nth-child(2) { animation-delay: 1.6s; }
+.project-card:nth-child(3) { animation-delay: 1.8s; }
+
+.project-card h4 {
+  margin-top: 0;
+  color: #a6a3e0;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-6px);
+  background: rgba(166, 163, 224, 0.25);
+  box-shadow: 0 0 10px rgba(166, 163, 224, 0.3);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
