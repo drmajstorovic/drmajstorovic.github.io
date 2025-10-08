@@ -1,39 +1,52 @@
-#about {
-    margin: auto;
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
     border-radius: 35px;
-    width: 50%;
-    background-color: #A6A3E0;
-    color: black;
-    text-align: justify;
-    padding: 70px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    z-index: 3;
-}
-
-#about-content {
-    display: flex;
-}
-
-#about-text {
-    flex: 1;
+    background: rgba(166, 163, 224, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 0 20px rgba(166, 163, 224, 0.2);
+    width: 65%;
     margin: auto;
-    width: 50%;
-    margin-right: auto;
-    padding-right: 40px;
+    margin-top: 12vh;
 }
 
-#about h2 {
-    text-align: center;
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(166, 163, 224, 0.6);
 }
 
-#image-me {
-    max-width: 200px;
-    object-fit: scale-down;
-    border-radius: 45px;
-    flex: 50%;
+#about-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    padding-bottom: 100px;
 }
+
+.info-card {
+    width: 300px;
+    background: rgba(166, 163, 224, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+    color: white;
+    box-shadow: 0 0 10px rgba(166, 163, 224, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(166, 163, 224, 0.6);
+}
+
 
 .collapse {
     width: 50%;
