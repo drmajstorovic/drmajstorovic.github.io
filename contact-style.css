@@ -1,67 +1,79 @@
-body {
-    overflow: hidden;
-}
-
 #contact {
-    text-align: center;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
 }
 
-#contact h2, h3 {
-    z-index: 3;
+#contact h2, 
+#contact h3 {
+  margin: 10px 0;
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
 }
-
-#contact-tabs div {
-    display: inline-block;
-    width: 350px;
-    height: 400px;
-    background-color: #A6A3E0;
-    color: black;
-    text-align: center;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 55px;
-    vertical-align: top;
-    z-index: 3;
-    transition: all 0.5s ease;
-}
-
-#contact-tabs div:hover {
-    border: 2px solid #BEBFE9;
-    box-shadow: 0 0 15px 10px #C9ABE3;
-}
+#contact h2:nth-of-type(1) { animation-delay: 0.2s; }
+#contact h2:nth-of-type(2) { animation-delay: 0.4s; }
+#contact h3 { animation-delay: 0.6s; }
 
 #contact-tabs {
-    position: relative;
-    padding: 0%;
-    margin: auto;
-    line-height: 24px;
-    z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 60px;
 }
 
-#contact-tabs a {
-    background-color: #C9ABE3;
-    color: black;
-    padding: 7px;
-    text-decoration: none;
-    border-radius: 55px;
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 360px;
+  text-decoration: none;
+  background: rgba(166, 163, 224, 0.1);
+  border: 1px solid rgba(166, 163, 224, 0.25);
+  border-radius: 25px;
+  color: white;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(166, 163, 224, 0.15);
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeInCard 0.8s ease forwards;
+}
+.tab:nth-of-type(1) { animation-delay: 1s; }
+.tab:nth-of-type(2) { animation-delay: 1.2s; }
+.tab:nth-of-type(3) { animation-delay: 1.4s; }
+
+.tab:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(166, 163, 224, 0.4);
+  border-color: rgba(166, 163, 224, 0.5);
+  background: rgba(166, 163, 224, 0.2);
 }
 
-#contact-tabs img {
-    display: block;
-    width: 90px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 50px;
+.tab h3 {
+  color: #A6A3E0;
 }
 
-@media screen and (max-width: 1150px) {
-    #contact-tabs div {
-        display: block;
-        margin: auto;
-        margin-top: 20px;
+.tab p {
+  color: #ddd;
+  margin: 0 auto;
+  line-height: 1.5;
 }
-    body {
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+
+.tab img {
+  width: 70px;
+  margin: 20px auto 0;
+  filter: drop-shadow(0 0 5px #A6A3E0);
+}
+
+/* Animacije */
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
