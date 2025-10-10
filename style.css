@@ -105,7 +105,7 @@ footer {
     text-align: center;
     padding: 3px;
 }
-
+/* 
 @media screen and (max-width: 800px) {
     #welcome, #my-projects, #project-links {
         width: 90%;
@@ -127,4 +127,4 @@ footer {
     #welcome h1, #welcome h3 {
         animation: fadeIn 3.0s ease forwards;
     }
-}
+} */
