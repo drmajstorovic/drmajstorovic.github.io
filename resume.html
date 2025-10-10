@@ -50,6 +50,16 @@
     </div>
 
     <script>
+        
+        const menuBtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+
+        menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("open");
+        navLinks.classList.toggle("active");
+        });
+
+        
         const particlesContainer = document.getElementById('particles');
 
         function createParticle() {
