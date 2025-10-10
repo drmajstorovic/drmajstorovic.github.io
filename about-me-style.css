@@ -139,55 +139,37 @@ h4 {
   animation-delay: 1.8s;
 }
 
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    width: 85%;
+    padding: 25px;
+    gap: 20px;
+  }
 
-@media screen and (max-width: 1360px) {
-    body {
-        overflow: auto !important;
-    }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
 
-    #about, .collapse {
-        width: 60%;
-        border-radius: 50px;
-    }
+  .about-text h2 {
+    font-size: 22px;
+  }
 
-    .section {
-        width: 60%;
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        text-align: left;
-    }
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 
-    #about-content, #about-text, #image-me {
-        display: block;
-        margin: auto;
-    }
+  #about-sections {
+    margin-top: 40px;
+    gap: 20px;
+  }
 
-    #about-content, #image-me {
-        padding: 0px;
-        margin: auto;
-    }
-
-    #about-text {
-        width: 100%;
-        padding: 0%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #about, .collapse {
-        width: 90%;
-        padding: 15px;
-        border-radius: 40px;
-        display: block;
-    }
-
-    #about-text{
-        width: 100%;
-        padding: 0%;
-    }
-
-    .section {
-        width: 90%;
-        text-align: left;
-    }
+  .info-card {
+    width: 85%;
+    padding: 25px;
+  }
 }
