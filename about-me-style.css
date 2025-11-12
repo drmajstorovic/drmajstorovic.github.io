@@ -47,40 +47,8 @@
     box-shadow: 0 0 20px rgba(166, 163, 224, 0.6);
 }
 
-
-.collapse {
-    width: 50%;
-    display: block;
-    margin: auto;
-    border-radius: 40px;
-    background-color: #A6A3E0;
-    color: black;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    padding: 25px;
-    z-index: 3;
-}
-
 .show {
     transition: border-bottom-right-radius 0.3s 0.3s, border-bottom-left-radius 0.3s 0.3s;
-}
-
-.section {
-    margin: auto;
-    border-radius: 75px;
-    width: 50%;
-    background-color: #A6A3E0;
-    text-align: left;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 3;
 }
 
 h3 {
